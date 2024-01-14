@@ -1,0 +1,8 @@
+FROM debian:testing
+
+ENV RUNTIME_DEPS "chromium"
+
+RUN apt-get -y update && apt install -y ${RUNTIME_DEPS}
+
+ENTRYPOINT [ "chromium" ]
+

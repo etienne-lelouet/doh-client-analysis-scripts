@@ -1,0 +1,15 @@
+cloudflare -i 50 -m 30 -n 1 -y 
+google -i 50 -m 30 -n 1 -y 
+quad9 -i 50 -m 30 -n 1 -y 
+cloudflare -i 100 -m 30 -n 1 -y 
+google -i 100 -m 30 -n 1 -y 
+quad9 -i 100 -m 30 -n 1 -y 
+cloudflare -i 1000 -m 30 -n 1 -y 
+google -i 1000 -m 30 -n 1 -y 
+quad9 -i 1000 -m 30 -n 1 -y 
+cloudflare -i 5000 -m 30 -n 1 -y 
+google -i 5000 -m 30 -n 1 -y 
+quad9 -i 5000 -m 30 -n 1 -y 
+cloudflare -i 60000 -m 30 -n 1 -y
+google -i 60000 -m 30 -n 1 -y 
+quad9 -i 60000 -m 30 -n 1 -y 

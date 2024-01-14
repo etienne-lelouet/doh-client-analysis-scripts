@@ -1,0 +1,18 @@
+# Empty listen_addresses to use systemd socket activation
+listen_addresses = [ '0.0.0.0:53' ]
+server_names = ['quad9']
+cache = true
+log_level = 2
+ignore_system_dns = true # we don't have any system resolver, use bootstrap resolver
+
+[query_log]
+  file = 'query.log'
+
+[nx_log]
+  file = 'nx.log'
+
+[static]
+	[static.'quad9']
+	stamp = 'sdns://AgYAAAAAAAAACDkuOS45LjEwICoV9dastufAkBreTrvHQ7LM1IkDK0bhZC8Gk2gwASWKE2RuczEwLnF1YWQ5Lm5ldDo0NDMKL2Rucy1xdWVyeQ'
+
+# had and error with quad9 dns cert hashes, followed these instructions (https://github.com/DNSCrypt/doh-server#dns-stamp-and-certificate-hashes) and use this tool, to generate a working, static dns stamp 

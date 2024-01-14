@@ -1,0 +1,14 @@
+FROM debian:testing
+
+# installing the debian version of firefox and THEN using the latest binaries for linux ensures we have all the librairies we need
+
+ENV RUNTIME_DEPS "bzip2 firefox-esr libxt6 ca-certificates"
+
+RUN apt-get -y update && apt install -y ${RUNTIME_DEPS}
+
+COPY firefox.tar.bz2 /firefox.tar.bz2
+
+RUN tar -xvf firefox.tar.bz2
+
+ENTRYPOINT [ "/firefox/firefox" ]
+

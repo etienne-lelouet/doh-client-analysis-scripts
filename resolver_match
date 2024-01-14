@@ -1,0 +1,4 @@
+cloudflare:ip.addr == 104.16.248.0/23 or ip.addr == 1.0.0.1 or ip.addr == 1.1.1.1
+google:ip.addr == 8.8.0.0/16
+quad9:ip.addr == 9.9.9.0/14 or ip.addr == 149.112.112.0/14
+

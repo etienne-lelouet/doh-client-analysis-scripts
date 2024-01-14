@@ -1,0 +1,9 @@
+FROM etienne/firefox
+
+RUN apt-get -y update && apt install -y bc bind9-dnsutils build-essential libc-ares-dev
+
+COPY dnscrypt-proxy dig.sh dig.c /
+
+RUN gcc /dig.c -lcares -Winline -O3 -o /digdrift
+
+ENTRYPOINT [ "/dnscrypt-proxy" ]
